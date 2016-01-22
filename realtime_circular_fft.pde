@@ -8,8 +8,8 @@ AudioInput lineIn;
 FFT fft;
 PImage bg;
 PImage img;
-int h = 540;
-int w = 960;
+int h = 1080;
+int w = 1980;
 float x1 = w/2;
 float y1 = h/2;
 float x2 = 0;
@@ -22,7 +22,7 @@ int fps = 5;
 void setup()
 {
   hint(ENABLE_ASYNC_SAVEFRAME);
-  size(960, 540);
+  size(1980, 1080);
   frameRate(fps);
 
   minim = new Minim(this);
@@ -87,10 +87,5 @@ void draw()
   //save frames for making video
   //saveFrame("frame-####.tga");
   
-  
-  if (!player.isPlaying())
-  {
-    delay(10);
-    exit();
-  }
+
 }
